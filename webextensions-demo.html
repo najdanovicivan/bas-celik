@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB Demo</title>
+    </head>
+    <body data-celik=true>
+        <h1>WEB DEMO</h1>
+        <button type="button" id="bascelik">Start</button>
+    <script>
+        // messages from page
+        window.addEventListener("message", function(event) {
+            var message = event.data;
+            if(message.source !== 'bascelik'){
+                return;
+            }
+            console.log("Content received from page", message);
+        });
+    </script>
+    </body>
+    
+</html>
